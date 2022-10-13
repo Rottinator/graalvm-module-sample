@@ -43,11 +43,13 @@
                             </execution>
                         </executions>
                         <configuration>
-                            <imageName>playground</imageName>
+                            <imageName>module-sample</imageName>
                             <mainClass>de.example.graalvmmodulesample.Application</mainClass>
                             <buildArgs>
                                 <buildArg>--no-fallback</buildArg>
                                 <buildArg>--verbose</buildArg>
+                                <buildArg>--module-path target/graalvm-module-sample-1.0-SNAPSHOT.jar</buildArg>
+                                <buildArg>--module graalvmmodulesample/de.example.graalvmmodulesample.Application</buildArg>
                                 <buildArg>-H:IncludeResources=.*csv</buildArg>
                                 <buildArg>-H:Log=registerResource=5</buildArg>
                             </buildArgs>
